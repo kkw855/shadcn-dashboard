@@ -2,11 +2,22 @@
   "name": "shadcn-dashboard",
   "version": "0.1.0",
   "private": true,
+  "lint-staged": {
+    "*.{css}": "prettier --write",
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint --max-warnings 0"
+    ]
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint app components lib --max-warnings 0",
+    "lint:fix": "eslint app components lib --fix",
+    "format": "prettier --write app components lib",
+    "prepare": "husky"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -31,6 +42,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.2",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "postcss": "^8.4.38",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.4",

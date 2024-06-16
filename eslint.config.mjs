@@ -10,6 +10,11 @@ import next from '@next/eslint-plugin-next'
 import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default tseslint.config(
+  {
+    linterOptions: {
+      reportUnusedDisableDirectives: 'error',
+    }
+  },
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
