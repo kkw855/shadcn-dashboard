@@ -22,7 +22,7 @@ import {
 import { useState } from 'react'
 
 export function CommandDemo() {
-  const [open, setOpen] = useState(false)
+  const [open] = useState(false)
 
   return (
     <Command className="rounded-lg border">
