@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "lint-staged": {
-    "*.{css}": "prettier --write",
+    "*.{css}": [
+      "prettier --write",
+      "prettier --check"
+    ],
     "*.{ts,tsx}": [
       "prettier --write",
+      "prettier --check",
       "eslint --fix",
       "eslint --max-warnings 0"
     ]
