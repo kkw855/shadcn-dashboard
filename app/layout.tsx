@@ -25,7 +25,7 @@ export default function RootLayout({
         <Sidebar />
         <main className="h-full w-full pl-[300px]">
           <Header />
-          {children}
+          <div className="p-8">{children}</div>
         </main>
       </body>
     </html>
