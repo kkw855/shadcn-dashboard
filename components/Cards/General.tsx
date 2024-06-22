@@ -382,7 +382,7 @@ export default function General() {
         <CardTitle>This week</CardTitle>
         <CardDescription>These are the results of this week.</CardDescription>
       </CardHeader>
-      <CardContent className="grid h-[400px] gap-4">
+      <CardContent className="h-[400px]">
         <MyResponsiveBump data={data} />
       </CardContent>
     </Card>
