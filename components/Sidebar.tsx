@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import {
   Bell,
   Cookie,
@@ -68,7 +69,11 @@ export default function Sidebar() {
   return (
     <div className="fixed flex min-h-screen w-[300px] min-w-[300px] flex-col gap-4 border-r p-4">
       <div>
-        <UserItem />
+        <UserItem
+          title="kkw855@gmail.com"
+          description="KEYUNG KIM"
+          backgroundColor="#10b981"
+        />
       </div>
       <div className="grow">
         <Command className="overflow-visible">
@@ -89,7 +94,12 @@ export default function Sidebar() {
           </CommandList>
         </Command>
       </div>
-      <div>Settings / Notification</div>
+      <div>
+        <Link href="/team" className="flex items-center gap-2">
+          <Settings />
+          <span>Team settings</span>
+        </Link>
+      </div>
     </div>
   )
 }
