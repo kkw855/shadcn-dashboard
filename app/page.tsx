@@ -14,14 +14,14 @@ import { DataTableDemo } from '@/components/Cards/DataTable'
 export default function Home() {
   return (
     <div className="grid gap-[32px]">
-      <div className="grid grid-cols-2 gap-[32px]">
+      <div className="grid gap-[32px] xl:grid-cols-2">
         <General />
         <div className="grid gap-[32px]">
           <Calendar />
           <Calendar />
         </div>
       </div>
-      <div className="grid h-[400px] grid-cols-3 gap-[32px] overflow-hidden">
+      <div className="grid gap-[32px] overflow-hidden xl:h-[400px] xl:grid-cols-3">
         <Lines />
         <Card className="overflow-y-scroll">
           <CardHeader>

@@ -20,15 +20,15 @@ type Data = {
   }[]
 }
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
+// make sure the parent container has a defined height when using
+// responsive component, otherwise the height will be 0, and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
 const MyResponsiveLine = ({ data /* see data tab */ }: { data: Data[] }) => (
   <ResponsiveLine
     data={data}
-    margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+    margin={{ top: 10, right: 20, bottom: 40, left: 50 }}
     xScale={{ type: 'point' }}
     yScale={{
       type: 'linear',
@@ -343,6 +343,7 @@ export default function Lines() {
       ],
     },
   ]
+
   return (
     <Card>
       <CardHeader>

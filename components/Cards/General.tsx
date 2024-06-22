@@ -20,8 +20,8 @@ type Data = {
   }[]
 }
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
+// make sure the parent container has a defined height when using
+// responsive component, otherwise the height will be 0, and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
@@ -67,7 +67,7 @@ const MyResponsiveBump = ({ data }: { data: Data[] }) => (
       legendOffset: -40,
       truncateTickAt: 0,
     }}
-    margin={{ top: 40, right: 100, bottom: 40, left: 60 }}
+    margin={{ top: 20, right: 50, bottom: 20, left: 50 }}
     axisRight={null}
   />
 )

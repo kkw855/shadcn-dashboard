@@ -17,8 +17,8 @@ type Data = {
   value: number
 }
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
+// make sure the parent container has a defined height when using
+// responsive component, otherwise the height will be 0, and
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
@@ -63,7 +63,7 @@ export default function Calendar() {
   const data = generateArray(2023, 100, 20, 100)
   console.table(data)
   return (
-    <Card>
+    <Card className="overflow-hidden">
       <CardHeader>
         <CardTitle>Calendar</CardTitle>
         <CardDescription>These are the numbers of this year.</CardDescription>
